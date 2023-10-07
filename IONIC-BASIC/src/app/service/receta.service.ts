@@ -34,17 +34,17 @@ export class RecetaService {
       nombre: 'Pollo a la mexicana', 
       image: 'https://d1uz88p17r663j.cloudfront.net/resized/08d45a55fe49e611abde012a9b72d8bb_POLLO_A_LA_MEXICANA_150_1200_600.jpg',
       ingredientes: [
-          '1/2 Cebolla asada'
-          ,'2 Dientes de Ajo asados'
-          ,'4 Jitomates asados'
-          ,'1/2 Taza de Agua'
-          ,'2 Cubos de Concentrado de Tomate con Pollo CONSOMATE'
-          ,'2 Cucharadas de Aceite de maíz'
-          ,'1/2 Cebolla fileteada'
-          ,'5 Muslos o piernas de pollo cocidos'
-          ,'3 Jitomates cortados en cubos pequeños'
-          ,'2 Chiles jalapeño cortados en tiras'
-          ,'2 Ramitas de Cilantro fresco desinfectadas y picadas finamente'
+        '1/2 Cebolla asada'
+,'2 Dientes de Ajo asados'
+,'4 Jitomates asados'
+,'1/2 Taza de Agua'
+,'2 Cubos de Concentrado de Tomate con Pollo CONSOMATE'
+,'2 Cucharadas de Aceite de maíz'
+,'1/2 Cebolla fileteada'
+,'5 Muslos o piernas de pollo cocidos'
+,'3 Jitomates cortados en cubos pequeños'
+,'2 Chiles jalapeño cortados en tiras'
+,'2 Ramitas de Cilantro fresco desinfectadas y picadas finamente'
       ]
     },
     {

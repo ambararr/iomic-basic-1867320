@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlumnosService } from '../service/alumnos.service';
-
 import { Alumno } from '../interface/alumno';
-
 
 @Component({
   selector: 'app-alumnos',
@@ -76,3 +74,4 @@ export class AlumnosPage implements OnInit {
   }
 
 }
+

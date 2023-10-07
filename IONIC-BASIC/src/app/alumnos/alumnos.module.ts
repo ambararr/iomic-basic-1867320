@@ -7,8 +7,9 @@ import { IonicModule } from '@ionic/angular';
 import { AlumnosPageRoutingModule } from './alumnos-routing.module';
 
 import { AlumnosPage } from './alumnos.page';
-import { DatosAlumnosComponent } from '../componentes/datos-alumnos/datos-alumnos.component';
-//'../componentes/datos-alumnos/datos-alumnos.component';
+import { DatosAlumnosComponent } from '../componente/datos-alumnos/datos-alumnos.component';
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,6 +17,6 @@ import { DatosAlumnosComponent } from '../componentes/datos-alumnos/datos-alumno
     IonicModule,
     AlumnosPageRoutingModule
   ],
-  declarations: [AlumnosPage,DatosAlumnosComponent]
+  declarations: [AlumnosPage, DatosAlumnosComponent]
 })
 export class AlumnosPageModule {}
