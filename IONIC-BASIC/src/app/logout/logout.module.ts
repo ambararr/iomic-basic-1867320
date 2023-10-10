@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { LogoutPage } from './logout.page';
 import { HomePageRoutingModule } from './logout-routing.module';
 
-
 @NgModule({
   imports: [
     CommonModule,

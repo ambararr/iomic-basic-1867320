@@ -22,7 +22,7 @@ export class InicioPage implements OnInit {
   constructor(
     private router: Router,
     private envioReceptor: EnvioReceptorService
-    ) { }
+    ) {  }
 
   ngOnInit() {
   }

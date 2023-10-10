@@ -16,5 +16,6 @@ import { InicioPage } from './inicio.page';
     InicioPageRoutingModule
   ],
   declarations: [InicioPage]
+  
 })
 export class InicioPageModule {}
