@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
-
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AutGuardGuard } from './service/auth-guard.guard';
 
 const routes: Routes = [
   {
-    
     path: 'logout',
     loadChildren: () => import('./logout/logout.module').then( m => m.HomePageModule)
   },
   {
     path: '',
-   
+    redirectTo: 'receta',
+    pathMatch: 'full'
   },
   {
     path: 'receta',
@@ -40,11 +39,14 @@ const routes: Routes = [
     path: 'presupuesto',
     loadChildren: () => import('./presupuesto/presupuesto.module').then( m => m.PresupuestoPageModule),
     canActivate: [AutGuardGuard]
+  },
+  {
+    path: 'destinos',
+    loadChildren: () => import('./destinos/destinos.module').then( m => m.DestinosPageModule),
+    canActivate: [AutGuardGuard]
   }
 
 ];
-
-
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
