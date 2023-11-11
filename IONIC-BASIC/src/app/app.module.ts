@@ -12,8 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent, FloatMenuComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [NavParams, HttpClientModule,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule],
+  providers: [NavParams, HttpClientModule,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy ,}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
