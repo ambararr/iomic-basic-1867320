@@ -17,6 +17,7 @@ import { MenuService } from '../service/menu.service';
 export class RegisterPage implements OnInit {
 
   user: User = new User();
+  formRegister : any;
 
   constructor(
     private autSvc: AutService,
