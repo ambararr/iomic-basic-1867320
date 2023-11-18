@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Lugar } from '../interface/lugar';
 import { AutService } from '../service/auth.service';
+import{ GooglemapsComponent} from '../componente/googlemap/googlemap.component'
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-destinos',
@@ -19,7 +21,8 @@ export class DestinosPage implements OnInit {
   longitud:any;
   constructor(
     private authService: AutService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private modalController: ModalController
   ) { }
 
   ngOnInit() {
@@ -119,4 +122,34 @@ export class DestinosPage implements OnInit {
 		});
 	}
 
+  async addDirection(){
+    let positionInput: any = {
+      lat: -2.898116,
+      lng: -78.99958149999999
+    };
+    if(this.latitud !== null){
+      positionInput.lat = this.latitud;
+      positionInput.lng = this.longitud;
+    }
+
+
+    const modalAdd = await this.modalController.create({
+      component: GooglemapsComponent,
+      mode: 'ios',
+      
+      componentProps: {position: positionInput} 
+    });
+
+    await modalAdd.present();
+
+    const {data} = await modalAdd.onWillDismiss();
+
+    if(data){
+      console.log('data->', data);
+      
+      this.longitud = data.pos.lng;
+      this.latitud = data.pos.lat;
+      console.log('datos de ubiciacion actualizados, latitud: '+this.latitud+' \nlongitud:'+this.longitud);
+    }
+  }   
 }
