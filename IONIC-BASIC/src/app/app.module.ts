@@ -8,11 +8,18 @@ import { IonicModule, IonicRouteStrategy, NavParams } from '@ionic/angular';
 import { FloatMenuComponent } from './float-menu/float-menu.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { IonicStorageModule } from '@ionic/storage-angular';
+import { Drivers } from '@ionic/storage';
 
 
 @NgModule({
   declarations: [AppComponent, FloatMenuComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule],
+  imports: [BrowserModule, HttpClientModule,IonicModule.forRoot(), AppRoutingModule,
+    IonicStorageModule.forRoot({
+      name: '__mydb',
+      driverOrder: [ Drivers.LocalStorage]
+    })
+  ],
   providers: [NavParams, HttpClientModule,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy ,}],
   bootstrap: [AppComponent],
 })
