@@ -69,7 +69,7 @@ Dentro de `IONIC-BASIC/src/app/`, las **páginas** contienen las vistas de cada 
 
 6. Abre en el navegador la dirección local indicada en la terminal.
 
-**Nota:** algunas secciones necesitan configuración o servicios adicionales. Las funciones de Firebase requieren su configuración correspondiente; la geolocalización necesita permisos del navegador y la sección `destinos-api` espera una API en `http://localhost:8080/post`. Por ello, esas funciones pueden no estar disponibles con solo iniciar la aplicación.
+**Nota:** algunas secciones necesitan configuración o servicios adicionales. Las funciones de Firebase requieren su configuración correspondiente; la geolocalización necesita permisos del navegador y la sección `destinos-api` espera una API en `localhost`. Por ello, esas funciones pueden no estar disponibles con solo iniciar la aplicación.
 
 ## 💡 ¿Qué aprendí con este proyecto?
 
